@@ -1,8 +1,10 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #202530;
+  --background-dark: #202530;
+  --background-light: #242935;  
+  --foreground: #ededed;
 }
 
 @theme inline {
@@ -12,15 +14,32 @@
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
 body {
-  background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Classe pour le motif avec couleur variable */
+.dotted-background {
+  background-color: var(--section-bg);
+  background-image: radial-gradient(rgba(255, 255, 255, 0.05) 1.5px, var(--section-bg) 1.5px);
+  background-size: 24px 24px;
+}
+
+/* Classes pour chaque section */
+.bg-dark {
+  --section-bg: var(--background-dark);
+}
+
+.bg-light {
+  --section-bg: var(--background-light);
+}
+
+.bg-navbar {
+  /* dark background with 50% opacity */
+  background-color: rgba(32, 37, 48, 0.8);
+}
+
+.bg-cards {
+  background-color: rgba(42, 48, 60, 0.5);
 }
