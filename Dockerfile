@@ -26,7 +26,7 @@ RUN npm run build;
 FROM gcr.io/distroless/nodejs20-debian12 AS runner
 WORKDIR /app
 # user non-root par défaut (nonroot:nonroot), sinon: USER 1001
-COPY --from=builder /app/public ./public
+# COPY --from=builder /app/public ./public
 COPY --from=builder /app/.next/standalone ./
 COPY --from=builder /app/.next/static ./.next/static
 
