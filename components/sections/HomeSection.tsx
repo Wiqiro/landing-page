@@ -29,10 +29,8 @@ export const HomeSection = () => {
             ],
             autoStart: true,
             loop: true,
-            
             delay: 75,
             deleteSpeed: 25,
-            pauseFor: 2000,
           }}
         />
       </div>

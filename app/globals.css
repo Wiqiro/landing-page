@@ -29,10 +29,12 @@ body {
 /* Classes pour chaque section */
 .bg-dark {
   --section-bg: var(--background-dark);
+  background-color: var(--background-dark);
 }
 
 .bg-light {
   --section-bg: var(--background-light);
+  background-color: var(--background-light);
 }
 
 .bg-navbar {
@@ -42,4 +44,11 @@ body {
 
 .bg-cards {
   background-color: rgba(42, 48, 60, 0.5);
+}
+
+input,
+textarea {
+  background-color: var(--background-light);
+  color: var(--foreground);
+  border: #ffffff20 1px solid;
 }

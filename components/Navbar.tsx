@@ -95,7 +95,7 @@ export const Navbar = () => {
           >
             CV
           </li>
-          <li
+          {/* <li
             className={`${sectionStyle}  ${
               activeSection === "interests"
                 ? "text-orange-400 hover:text-orange-400 font-semibold underline"
@@ -106,6 +106,18 @@ export const Navbar = () => {
             }}
           >
             Intérêts
+          </li> */}
+          <li
+            className={`${sectionStyle}  ${
+              activeSection === "contact"
+                ? "text-orange-400 hover:text-orange-400 font-semibold underline"
+                : ""
+            }`}
+            onClick={() => {
+              scrollToSectionWithNavOffset("contact", navHeight);
+            }}
+          >
+            Contact
           </li>
         </ul>
       </div>
