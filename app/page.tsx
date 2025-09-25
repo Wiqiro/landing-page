@@ -1,5 +1,3 @@
-"use client";
-
 import { Navbar } from "@/components/Navbar";
 import { AboutSection } from "@/components/sections/AboutSection";
 import { BottomSection } from "@/components/sections/BottomSection";
@@ -54,9 +52,6 @@ export default function Home() {
       >
         <ResumeSection />
       </section>
-      {/* <section id="interests" className="min-h-screen dotted-background bg-dark p-8 border-b border-white/10">
-        <InterestsSection />
-      </section> */}
 
       <section
         id="contact"

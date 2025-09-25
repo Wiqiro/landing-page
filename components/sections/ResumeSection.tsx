@@ -9,15 +9,10 @@ export const ResumeSection = () => {
         Mon CV
       </h2>
       <h3 className="text-3xl font-bold mb-4 text-center">Expérience</h3>
-
-      {/* Timeline container */}
       <div className="relative mb-8">
-        {/* Vertical line */}
-
         <div className="group flex flex-col gap-8">
           <div className="relative pl-20">
             <div className="absolute left-[27px] top-13 -bottom-15 w-[2px] bg-white/10" />
-            {/* Circle marker */}
             <div className="absolute left-4 top-7 w-6 h-6 rounded-full bg-orange-300/50 blur-xs " />
             <div className="absolute left-4 top-7 w-6 h-6 rounded-full bg-[#242935]/90 border-[3px] border-[#202530] " />
 
@@ -33,7 +28,6 @@ export const ResumeSection = () => {
 
           <div className="relative pl-20">
             <div className="absolute left-[27px] top-13 -bottom-15 group-last:bottom-10 w-[2px] bg-white/10" />
-            {/* Circle marker */}
             <div className="absolute left-4 top-7 w-6 h-6 rounded-full bg-orange-300/50 blur-xs " />
             <div className="absolute left-4 top-7 w-6 h-6 rounded-full bg-[#242935]/90 border-[3px] border-[#202530] " />
 
@@ -51,14 +45,10 @@ export const ResumeSection = () => {
 
       <h3 className="text-3xl font-bold mb-4 text-center">Formation</h3>
 
-      {/* Timeline container */}
       <div className="relative mb-8">
-        {/* Vertical line */}
-
         <div className="group flex flex-col gap-8">
           <div className="relative pl-20">
             <div className="absolute left-[27px] top-13 -bottom-15 w-[2px] bg-white/10" />
-            {/* Circle marker */}
             <div className="absolute left-4 top-7 w-6 h-6 rounded-full bg-orange-300/50 blur-xs " />
             <div className="absolute left-4 top-7 w-6 h-6 rounded-full bg-[#242935]/90 border-[3px] border-[#202530] " />
 
@@ -74,7 +64,6 @@ export const ResumeSection = () => {
 
           <div className="relative pl-20">
             <div className="absolute left-[27px] top-13 -bottom-15 group-last:bottom-10 w-[2px] bg-white/10" />
-            {/* Circle marker */}
             <div className="absolute left-4 top-7 w-6 h-6 rounded-full bg-orange-300/50 blur-xs " />
             <div className="absolute left-4 top-7 w-6 h-6 rounded-full bg-[#242935]/90 border-[3px] border-[#202530] " />
 
