@@ -1,29 +1,68 @@
-import React from "react";
+"use client";
+
+import { useEffect, useState } from "react";
 import { Github } from "react-bootstrap-icons";
 import { ProjectCard } from "../ProjectCard";
-import useCountUp from "../../hooks/useCountUp";
+import dynamic from "next/dynamic";
+
+const AnimatedNumber = dynamic(() => import("../AnimatedNumber"));
 
 export const ProjectsSection = () => {
-  const depots = useCountUp(24, 3000);
-  const contributions = useCountUp(1592, 3000);
-  const acad = useCountUp(13, 3000);
+  const [publicRepos, setPublicRepos] = useState(0);
+  const [totalContributions, setTotalContributions] = useState(0);
+  const academicProjects = 13;
+
+  useEffect(() => {
+    const fetchContributionsData = async () => {
+      try {
+        const response = await fetch(
+          "https://github-contributions-api.jogruber.de/v4/Wiqiro"
+        );
+        const data = await response.json();
+        const yearTotals = (Object.values(data?.total) as number[]) || [];
+        console.log(yearTotals);
+        setTotalContributions(yearTotals.reduce((a, b) => a + b, 0));
+      } catch (error) {
+        console.error("Error fetching data:", error);
+      }
+    };
+    const fetchReposData = async () => {
+      try {
+        fetch("https://api.github.com/users/Wiqiro")
+          .then((res) => res.json())
+          .then((data) => {
+            setPublicRepos(data.public_repos || 0);
+          });
+      } catch (error) {
+        console.error("Error fetching data:", error);
+      }
+    };
+
+    fetchContributionsData();
+    fetchReposData();
+  }, []);
 
   return (
     <div className="mx-auto max-w-7xl">
-      <h2 className="text-4xl text-orange-400 font-bold mb-12 text-center">Projets</h2>
+      <h2 className="text-4xl text-orange-400 font-bold mb-12 text-center">
+        Projets
+      </h2>
       <div className="flex flex-col md:flex-row items-center justify-evenly space-y-12 mb-12 md:mb-0 md:items-baseline">
-        <div className="flex flex-col items-center w-50 space-y-2">
-          <p className="text-orange-400 font-bold text-5xl">{depots}</p>
-          <p>Dépôts publics</p>
-        </div>
-        <div className="flex flex-col items-center w-50 space-y-2">
-          <p className="text-orange-400 font-bold text-5xl">{contributions}</p>
-          <p>Contributions</p>
-        </div>
-        <div className="flex flex-col items-center w-50 space-y-2">
-          <p className="text-orange-400 font-bold text-5xl">{acad}</p>
-          <p>Projets académiques</p>
-        </div>
+        <AnimatedNumber
+          end={publicRepos}
+          duration={3000}
+          label="Dépôts publics"
+        />
+        <AnimatedNumber
+          end={totalContributions}
+          duration={3000}
+          label="Contributions"
+        />
+        <AnimatedNumber
+          end={academicProjects}
+          duration={3000}
+          label="Projets académiques"
+        />
       </div>
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
         <ProjectCard
@@ -46,7 +85,9 @@ export const ProjectsSection = () => {
         />
 
         <div className="flex flex-col items-center justify-center space-y-2">
-          <div className="text-orange-400 text-2xl font-bold">Et bien plus...</div>
+          <div className="text-orange-400 text-2xl font-bold">
+            Et bien plus...
+          </div>
           <a
             className="text-white text-md underline underline-offset-2 flex items-center space-x-2 transition duration-300 hover:scale-105 hover:text-orange-300"
             href="https://github.com/Wiqiro"

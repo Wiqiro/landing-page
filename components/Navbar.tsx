@@ -1,3 +1,5 @@
+"use client";
+
 import {
   computeActiveSectionWithNavOffset,
   scrollToSectionWithNavOffset,
@@ -95,18 +97,6 @@ export const Navbar = () => {
           >
             CV
           </li>
-          {/* <li
-            className={`${sectionStyle}  ${
-              activeSection === "interests"
-                ? "text-orange-400 hover:text-orange-400 font-semibold underline"
-                : ""
-            }`}
-            onClick={() => {
-              scrollToSectionWithNavOffset("interests", navHeight);
-            }}
-          >
-            Intérêts
-          </li> */}
           <li
             className={`${sectionStyle}  ${
               activeSection === "contact"

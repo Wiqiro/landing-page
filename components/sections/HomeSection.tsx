@@ -1,3 +1,5 @@
+"use client"
+
 import { scrollToSectionWithNavOffset } from "@/helpers/navigation";
 import {
   CaretDownFill,
