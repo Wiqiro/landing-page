@@ -6,7 +6,6 @@ import {
 } from "@/helpers/navigation";
 import { useEffect, useState } from "react";
 import { useI18n } from "@/components/I18nProvider";
-import LanguageSwitcher from "@/components/LanguageSwitcher";
 import Link from "next/link";
 
 const sectionStyle =
