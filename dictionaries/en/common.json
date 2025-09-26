@@ -1,0 +1,46 @@
+{
+  "hero.title": "William Imbert",
+  "hero.lines.0": "Software engineering student.",
+  "hero.lines.1": "Full-stack developer.",
+  "hero.lines.2": "DevOps enthusiast.",
+  "hero.lines.3": "Software architecture hobbyist.",
+  "hero.lines.4": "Quality assurance enthusiast.",
+  "hero.lines.5": "Road cycling enthusiast.",
+  "hero.cta": "Contact me",
+
+  "nav.home": "Home",
+  "nav.about": "About",
+  "nav.projects": "Projects",
+  "nav.resume": "Resume",
+  "nav.contact": "Contact",
+
+  "about.title": "About",
+  "about.lead": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sit amet ultrices est, eu sollicitudin sem.",
+  "about.lead2": "Integer maximus sit amet nisi ut malesuada. Curabitur nec eros sit amet ipsum condimentum imperdiet id condimentum risus.",
+  "about.lead3": "Maecenas euismod malesuada lobortis. Sed mollis nibh id velit iaculis condimentum.",
+  "contact.title": "Contact Me",
+  "contact.lead": "For any request or proposition, feel free to contact me using the details below or follow me on social networks.",
+  "contact.coords": "Contact details",
+  "contact.follow": "Follow me",
+
+  "projects.title": "Projects",
+  "projects.repos": "Public repos",
+  "projects.contributions": "Contributions",
+  "projects.academic": "Academic projects",
+  "projects.more": "And more...",
+  "projects.more_cta": "Check my GitHub for more projects!",
+  "projects.sample_title_1": "Project 1",
+  "projects.sample_desc_1": "Description of project 1",
+  "projects.sample_title_2": "Project 2",
+  "projects.sample_desc_2": "Description of project 2",
+  "projects.sample_title_3": "Project 3",
+  "projects.sample_desc_3": "Description of project 3",
+
+  "resume.title": "My Resume",
+  "resume.experience": "Experience",
+  "resume.education": "Education",
+  "resume.skills": "Skills",
+
+  "bottom.copyright": "William Imbert © 2025",
+  "bottom.build": "Built with Next.js, hosted on Google Cloud"
+}
