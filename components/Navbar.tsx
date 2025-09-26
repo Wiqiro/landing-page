@@ -124,6 +124,7 @@ export const Navbar = () => {
                 : ""
             }`}
             href="/fr"
+            scroll={true}
           >
             FR
           </Link>
