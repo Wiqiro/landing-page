@@ -36,7 +36,7 @@ on:
 
 env:
   PROJECT_ID: custom-manifest-473209-b1
-  REGION: europe-west9
+  REGION: europe-west1
   SERVICE: landing-page
   WORKLOAD_IDENTITY_PROVIDER: projects/563595338540/locations/global/workloadIdentityPools/github/providers/my-repo
 
