@@ -1,14 +1,15 @@
+"use client";
 import { Braces, Globe2 } from "react-bootstrap-icons";
 import { ExperienceCard } from "../ExperienceCard";
 import { SkillCard } from "../SkillCard";
+import { useI18n } from "@/components/I18nProvider";
 
 export const ResumeSection = () => {
+  const { t } = useI18n();
   return (
     <div className="mx-auto max-w-5xl">
-      <h2 className="text-4xl text-orange-400 font-bold mb-8 text-center">
-        Mon CV
-      </h2>
-      <h3 className="text-3xl font-bold mb-4 text-center">Expérience</h3>
+      <h2 className="text-4xl text-orange-400 font-bold mb-8 text-center">{t("resume.title")}</h2>
+      <h3 className="text-3xl font-bold mb-4 text-center">{t("resume.experience")}</h3>
       <div className="relative mb-8">
         <div className="group flex flex-col gap-8">
           <div className="relative pl-20">
@@ -43,7 +44,7 @@ export const ResumeSection = () => {
         </div>
       </div>
 
-      <h3 className="text-3xl font-bold mb-4 text-center">Formation</h3>
+  <h3 className="text-3xl font-bold mb-4 text-center">{t("resume.education")}</h3>
 
       <div className="relative mb-8">
         <div className="group flex flex-col gap-8">
@@ -79,7 +80,7 @@ export const ResumeSection = () => {
         </div>
       </div>
 
-      <h3 className="text-3xl font-bold mb-4 text-center">Compétences</h3>
+  <h3 className="text-3xl font-bold mb-4 text-center">{t("resume.skills")}</h3>
       <div className="grid grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
         <SkillCard
           title="Frameworks et technologies web"

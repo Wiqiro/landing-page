@@ -1,17 +1,17 @@
 "use client";
 
-import { createContext, useContext } from "react";
+import { Locale } from "@/helpers/locales";
+import { createContext, ReactNode, useContext } from "react";
 
-type Ctx = { t: (k: string) => string; locale: string };
-const I18nContext = createContext<Ctx>({ t: (k) => k, locale: "fr" });
+export const I18nContext = createContext({ t: (k: string) => k, locale: "fr" as Locale });
 
 export const I18nProvider = ({
   children,
   locale,
   messages,
 }: {
-  children: React.ReactNode;
-  locale: string;
+  children: ReactNode;
+  locale: Locale;
   messages: Record<string, string>;
 }) => {
   const t = (k: string) => messages[k] ?? k;

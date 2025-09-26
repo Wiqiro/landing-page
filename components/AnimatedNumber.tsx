@@ -1,14 +1,14 @@
 "use client";
 
-import React, { useEffect, useRef, useState } from "react";
+import React, { ReactNode, useEffect, useRef, useState } from "react";
 
 type Props = {
   end: number;
-  duration?: number; // ms
-  label?: React.ReactNode;
+  duration?: number;
+  label?: ReactNode;
 };
 
-const AnimatedNumber: React.FC<Props> = ({ end, duration = 1500, label }) => {
+const AnimatedNumber = ({ end, duration = 1500, label }: Props) => {
   const [value, setValue] = useState(0);
   const [started, setStarted] = useState(false);
   const ref = useRef<HTMLDivElement | null>(null);
