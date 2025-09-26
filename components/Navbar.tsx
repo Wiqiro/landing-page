@@ -5,11 +5,14 @@ import {
   scrollToSectionWithNavOffset,
 } from "@/helpers/navigation";
 import { useEffect, useState } from "react";
+import { useI18n } from "@/components/I18nProvider";
+import Link from "next/link";
 
 const sectionStyle =
   "hover:underline cursor-pointer underline-offset-6 transition duration-300 hover:scale-105 hover:text-orange-300";
 
 export const Navbar = () => {
+  const { t, locale } = useI18n();
   const [scrolled, setScrolled] = useState(false);
   const [activeSection, setActiveSection] = useState<string | null>(null);
   const navHeight = 56;
@@ -48,67 +51,92 @@ export const Navbar = () => {
           <span className=" text-orange-400 transition ">William Imbert</span>
           {" />"}
         </h1>
-        <ul className="flex space-x-8">
-          <li
-            className={`${sectionStyle} ${
-              activeSection === "home"
-                ? "text-orange-400 hover:text-orange-400 font-semibold underline"
-                : ""
-            }`}
-            onClick={() => {
-              scrollToSectionWithNavOffset("home", navHeight);
-            }}
-          >
-            Home
-          </li>
-          <li
+
+        <div className="hidden md:flex items-center space-x-8 ">
+          <ul className="flex space-x-8">
+            <li
+              className={`${sectionStyle} ${
+                activeSection === "home"
+                  ? "text-orange-400 hover:text-orange-400 font-semibold underline"
+                  : ""
+              }`}
+              onClick={() => {
+                scrollToSectionWithNavOffset("home", navHeight);
+              }}
+            >
+              {t("nav.home")}
+            </li>
+            <li
+              className={`${sectionStyle}  ${
+                activeSection === "about"
+                  ? "text-orange-400 hover:text-orange-400 font-semibold underline"
+                  : ""
+              }`}
+              onClick={() => {
+                scrollToSectionWithNavOffset("about", navHeight);
+              }}
+            >
+              {t("nav.about")}
+            </li>
+            <li
+              className={`${sectionStyle}  ${
+                activeSection === "projects"
+                  ? "text-orange-400 hover:text-orange-400 font-semibold underline"
+                  : ""
+              }`}
+              onClick={() => {
+                scrollToSectionWithNavOffset("projects", navHeight);
+              }}
+            >
+              {t("nav.projects")}
+            </li>
+            <li
+              className={`${sectionStyle}  ${
+                activeSection === "resume"
+                  ? "text-orange-400 hover:text-orange-400 font-semibold underline"
+                  : ""
+              }`}
+              onClick={() => {
+                scrollToSectionWithNavOffset("resume", navHeight);
+              }}
+            >
+              {t("nav.resume")}
+            </li>
+            <li
+              className={`${sectionStyle}  ${
+                activeSection === "contact"
+                  ? "text-orange-400 hover:text-orange-400 font-semibold underline"
+                  : ""
+              }`}
+              onClick={() => {
+                scrollToSectionWithNavOffset("contact", navHeight);
+              }}
+            >
+              {t("nav.contact")}
+            </li>
+          </ul>
+        </div>
+        <ul className="flex space-x-4">
+          <Link
             className={`${sectionStyle}  ${
-              activeSection === "about"
+              locale === "fr"
                 ? "text-orange-400 hover:text-orange-400 font-semibold underline"
                 : ""
             }`}
-            onClick={() => {
-              scrollToSectionWithNavOffset("about", navHeight);
-            }}
+            href="/fr"
           >
-            À propos
-          </li>
-          <li
+            FR
+          </Link>
+          <Link
             className={`${sectionStyle}  ${
-              activeSection === "projects"
+              locale === "en"
                 ? "text-orange-400 hover:text-orange-400 font-semibold underline"
                 : ""
             }`}
-            onClick={() => {
-              scrollToSectionWithNavOffset("projects", navHeight);
-            }}
+            href="/en"
           >
-            Projets
-          </li>
-          <li
-            className={`${sectionStyle}  ${
-              activeSection === "resume"
-                ? "text-orange-400 hover:text-orange-400 font-semibold underline"
-                : ""
-            }`}
-            onClick={() => {
-              scrollToSectionWithNavOffset("resume", navHeight);
-            }}
-          >
-            CV
-          </li>
-          <li
-            className={`${sectionStyle}  ${
-              activeSection === "contact"
-                ? "text-orange-400 hover:text-orange-400 font-semibold underline"
-                : ""
-            }`}
-            onClick={() => {
-              scrollToSectionWithNavOffset("contact", navHeight);
-            }}
-          >
-            Contact
-          </li>
+            EN
+          </Link>
         </ul>
       </div>
     </nav>

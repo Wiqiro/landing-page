@@ -1,8 +1,10 @@
+import { ReactNode } from "react";
+
 export const Card = ({
   children,
   hoverEffect = true,
 }: {
-  children: React.ReactNode;
+  children: ReactNode;
   hoverEffect?: boolean;
 }) => {
   return (

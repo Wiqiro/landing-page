@@ -1,3 +1,4 @@
+import { ReactNode } from "react";
 import { Card } from "./Card";
 
 export const SkillCard = ({
@@ -7,7 +8,7 @@ export const SkillCard = ({
 }: {
   title: string;
   skills: string;
-  icon?: React.ReactNode;
+  icon?: ReactNode;
 }) => {
   return (
     <Card>
