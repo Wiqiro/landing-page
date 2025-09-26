@@ -4,56 +4,52 @@ import React, { useEffect, useRef, useState } from "react";
 
 type Props = {
   end: number;
-  duration?: number;
+  duration?: number; // ms
   label?: React.ReactNode;
 };
 
-const AnimatedNumber: React.FC<Props> = ({ end, duration = 3000, label }) => {
+const AnimatedNumber: React.FC<Props> = ({ end, duration = 1500, label }) => {
   const [value, setValue] = useState(0);
+  const [started, setStarted] = useState(false);
   const ref = useRef<HTMLDivElement | null>(null);
-  const raf = useRef<number | null>(null);
 
-  const easeInOutCubic = (t: number) =>
-    t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2;
-
+  // Démarre une seule fois quand visible
   useEffect(() => {
     const el = ref.current;
     if (!el) return;
 
-    const startAnim = () => {
-      const start = performance.now();
-
-      const loop = (now: number) => {
-        const progress = Math.min((now - start) / duration, 1);
-        setValue(Math.round(easeInOutCubic(progress) * end));
-        if (progress < 1) raf.current = requestAnimationFrame(loop);
-      };
-
-      setValue(0);
-      raf.current = requestAnimationFrame(loop);
-    };
-
-    const isVisible = () => {
-      const r = el.getBoundingClientRect();
-      return r.top < window.innerHeight && r.bottom >= 0;
-    };
-
-    const onScroll = () => {
-      if (isVisible()) {
-        startAnim();
+    const io = new IntersectionObserver(([entry], obs) => {
+      if (entry.isIntersecting) {
+        setStarted(true);
+        obs.unobserve(el); // évite tout redémarrage
       }
+    }, { threshold: 0.2 });
+
+    io.observe(el);
+    return () => io.disconnect();
+  }, []);
+
+  useEffect(() => {
+    if (!started) return;
+
+    if (window.matchMedia?.("(prefers-reduced-motion: reduce)").matches) {
+      setValue(end);
+      return;
+    }
+
+    let raf = 0;
+    const start = performance.now();
+
+    const tick = (now: number) => {
+      const t = Math.min((now - start) / duration, 1);
+      const eased = t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2;
+      setValue(Math.round(eased * end));
+      if (t < 1) raf = requestAnimationFrame(tick);
     };
 
-    onScroll();
-    window.addEventListener("scroll", onScroll, { passive: true });
-    window.addEventListener("resize", onScroll);
-
-    return () => {
-      window.removeEventListener("scroll", onScroll);
-      window.removeEventListener("resize", onScroll);
-      if (raf.current) cancelAnimationFrame(raf.current);
-    };
-  }, [end, duration]);
+    raf = requestAnimationFrame(tick);
+    return () => cancelAnimationFrame(raf);
+  }, [started, end, duration]);
 
   return (
     <div ref={ref} className="flex flex-col items-center w-50 space-y-2">
