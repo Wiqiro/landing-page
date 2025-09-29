@@ -21,7 +21,6 @@ export const HomeSection = () => {
               t("hero.lines.1"),
               t("hero.lines.2"),
               t("hero.lines.3"),
-              t("hero.lines.4"),
               t("hero.lines.5"),
             ],
             autoStart: true,

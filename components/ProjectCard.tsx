@@ -2,7 +2,7 @@ import { Github } from "react-bootstrap-icons";
 import { Card } from "./Card";
 
 const iconStyle =
-  "text-orange-400 transition duration-300 ease-in-out hover:scale-110";
+  "text-orange-400 transition duration-300 ease-in-out hover:scale-105 text-white/90 hover:text-orange-300";
 
 export const ProjectCard = ({
   title,

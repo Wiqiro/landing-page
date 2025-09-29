@@ -90,13 +90,13 @@ export const ProjectsSection = () => {
             {t("projects.more")}
           </div>
           <a
-            className="text-white text-md underline underline-offset-2 flex items-center space-x-2 transition duration-300 hover:scale-105 hover:text-orange-300"
+            className="text-white  flex items-center space-x-2 transition duration-300 hover:scale-105 hover:text-orange-300"
             href="https://github.com/Wiqiro"
             target="_blank"
             rel="noopener noreferrer"
           >
             <Github size={16} />
-            <p>{t("projects.more_cta")}</p>
+            <p className="text-center underline underline-offset-2">{t("projects.more_cta")}</p>
           </a>
         </div>
       </div>

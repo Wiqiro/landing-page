@@ -34,13 +34,13 @@ export const Navbar = () => {
 
   return (
     <nav
-      className={`w-full p-4 absolute top-0 transition-all duration-500 ease-in-out border-b ${
+      className={`w-full md:text-sm lg:text-base p-4 absolute top-0 transition-all duration-500 ease-in-out border-b ${
         scrolled
           ? "backdrop-blur-[2px] bg-navbar border-white/10 shadow-sm"
           : "border-transparent bg-transparent"
       }`}
     >
-      <div className="flex items-center justify-between mx-4 ">
+      <div className="flex items-center justify-between mx-4">
         <h1
           className="font-bold cursor-pointer hover:text-orange-300 transition duration-300 hover:scale-105"
           onClick={() => {
@@ -52,7 +52,7 @@ export const Navbar = () => {
           {" />"}
         </h1>
 
-        <div className="hidden md:flex items-center space-x-8 ">
+        <div className="hidden md:flex items-center space-x-8 lg:absolute left-1/2 lg:-translate-x-1/2">
           <ul className="flex space-x-8">
             <li
               className={`${sectionStyle} ${
