@@ -7,12 +7,10 @@ import { ProjectsSection } from "@/components/sections/ProjectsSection";
 import { ResumeSection } from "@/components/sections/ResumeSection";
 
 const sectionStyle = "dotted-background bg-dark border-b border-white/10 ";
-const NAVBAR_HEIGHT = "56px";
-const BOTTOM_SECTION_HEIGHT = "96px";
 
 export const dynamic = "error";
 
-export default async function Home() {
+const Home = () => {
   return (
     <main>
       <section id="navbar" className="fixed w-full z-10">
@@ -25,26 +23,43 @@ export default async function Home() {
       </section>
 
       {/* Section About */}
-      <section id="about" className="dotted-background bg-light p-8 border-b border-white/10" style={{ minHeight: `calc(100vh - ${NAVBAR_HEIGHT})` }}>
+      <section
+        id="about"
+        className="dotted-background bg-light pt-8 pb-20 border-b border-white/10"
+      >
         <AboutSection />
       </section>
 
       {/* Section Projects */}
-      <section id="projects" className="dotted-background bg-dark p-8 border-b border-white/10" style={{ minHeight: `calc(100vh - ${NAVBAR_HEIGHT})` }}>
+      <section
+        id="projects"
+        className="dotted-background bg-dark pt-8 pb-20 border-b border-white/10"
+      >
         <ProjectsSection />
       </section>
 
-      <section id="resume" className="dotted-background bg-light p-8 border-b border-white/10" style={{ minHeight: `calc(100vh - ${NAVBAR_HEIGHT})` }}>
+      <section
+        id="resume"
+        className="dotted-background bg-light pt-8 pb-20 border-b border-white/10"
+      >
         <ResumeSection />
       </section>
 
-      <section id="contact" className="min-h-screen dotted-background bg-dark p-8 border-b border-white/10" style={{ minHeight: `calc(100vh - ${NAVBAR_HEIGHT} - ${BOTTOM_SECTION_HEIGHT})` }}>
+      <section
+        id="contact"
+        className="dotted-background bg-dark pt-8 pb-20 border-b border-white/10"
+      >
         <ContactSection />
       </section>
 
-      <section id="bottom" className="h-[96px] bg-[#1E222C] m-auto border-b border-white/10 flex  justify-center items-center">
+      <section
+        id="bottom"
+        className="h-[96px] bg-[#1E222C] m-auto border-b border-white/10 flex justify-center items-center"
+      >
         <BottomSection />
       </section>
     </main>
   );
 }
+
+export default Home;

@@ -4,7 +4,7 @@ import path from "node:path";
 export const loadTranslations = async (
   locale: "fr" | "en"
 ): Promise<Record<string, string>> => {
-  const root = path.join(process.cwd(), "dictionaries");
+  const root = path.join(process.cwd(), "translations");
 
   const file = path.join(root, `${String(locale)}.json`);
   const exists = await fs
