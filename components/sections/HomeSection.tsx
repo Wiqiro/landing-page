@@ -6,19 +6,19 @@ import Typewriter from "typewriter-effect";
 import { useI18n } from "@/components/I18nProvider";
 
 const iconStyle =
-  "text-white transition duration-300 hover:scale-105 hover:text-orange-300";
+  "text-gray-100 transition duration-300 hover:scale-105 hover:text-orange-300";
 
 export const HomeSection = () => {
   const { t } = useI18n();
   return (
-    <div className="absolute top-1/3 w-full text-center h-2/3">
-      <h1 className="text-7xl text-orange-400 font-bold mb-8">{t("hero.title")}</h1>
-      <div className="text-3xl text-white mb-32">
+    <div className="absolute top-1/3 left-0 right-0 w-full text-center h-2/3">
+      <h1 className="text-4xl sm:text-6xl md:text-7xl text-orange-400 font-bold mb-8">{t("hero.title")}</h1>
+      <div className="text-xl md:text-3xl text-gray-100 mb-32 h-[2.5rem]">
         <Typewriter
           options={{
             strings: [
               t("hero.lines.0"),
-              t("hero.lines.1"),
+              t("hero.lines.1"),  
               t("hero.lines.2"),
               t("hero.lines.3"),
               t("hero.lines.5"),

@@ -2,11 +2,9 @@
 
 import { Github } from "react-bootstrap-icons";
 import { ProjectCard } from "../ProjectCard";
-import dynamic from "next/dynamic";
 import { useI18n } from "@/components/I18nProvider";
 import { useEffect, useState } from "react";
-
-const AnimatedNumber = dynamic(() => import("../AnimatedNumber"));
+import AnimatedNumber from "../AnimatedNumber";
 
 export const ProjectsSection = () => {
   const { t } = useI18n();
@@ -44,16 +42,16 @@ export const ProjectsSection = () => {
   }, []);
 
   return (
-    <div className="mx-auto max-w-7xl">
+    <div className="mx-auto max-w-2xl lg:max-w-5xl">
       <h2 className="text-4xl text-orange-400 font-bold mb-12 text-center">
         {t("projects.title")}
       </h2>
-      <div className="flex flex-col md:flex-row items-center justify-evenly space-y-12 mb-12 md:mb-0 md:items-baseline">
+      <div className="flex flex-col sm:flex-row items-center justify-evenly space-y-8 mb-12 sm:items-baseline">
         <AnimatedNumber
           end={publicRepos}
           duration={3000}
           label={t("projects.repos")}
-        />
+        /> 
         <AnimatedNumber
           end={totalContributions}
           duration={3000}
@@ -90,7 +88,7 @@ export const ProjectsSection = () => {
             {t("projects.more")}
           </div>
           <a
-            className="text-white  flex items-center space-x-2 transition duration-300 hover:scale-105 hover:text-orange-300"
+            className="text-gray-100  flex items-center space-x-2 transition duration-300 hover:scale-105 hover:text-orange-300"
             href="https://github.com/Wiqiro"
             target="_blank"
             rel="noopener noreferrer"

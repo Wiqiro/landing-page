@@ -2,7 +2,7 @@ import { Github } from "react-bootstrap-icons";
 import { Card } from "./Card";
 
 const iconStyle =
-  "text-orange-400 transition duration-300 ease-in-out hover:scale-105 text-white/90 hover:text-orange-300";
+  "text-orange transition duration-300 ease-in-out hover:scale-105 hover:text-orange-300";
 
 export const ProjectCard = ({
   title,
@@ -21,11 +21,12 @@ export const ProjectCard = ({
           href="https://github.com/Wiqiro"
           target="_blank"
           rel="noopener noreferrer"
+          className="text-gray-100"
         >
           <Github size={32} className={iconStyle} />
         </a>
       </div>
-      <p className="text-white mb-4">{description}</p>
+      <p className="text-gray-100 mb-4">{description}</p>
     </Card>
   );
 };
