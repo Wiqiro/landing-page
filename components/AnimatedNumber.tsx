@@ -53,8 +53,8 @@ const AnimatedNumber = ({ end, duration = 1500, label }: Props) => {
 
   return (
     <div ref={ref} className="flex flex-col items-center w-50 space-y-2">
-      <p className="text-orange-400 font-bold text-5xl">{value}</p>
-      {label && <p>{label}</p>}
+      <p className="text-orange-400 font-bold text-4xl md:text-5xl">{value}</p>
+      {label && <p className="flex text-center h-[2.5rem]">{label}</p>}
     </div>
   );
 };

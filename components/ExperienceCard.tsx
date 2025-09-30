@@ -12,7 +12,7 @@ export const ExperienceCard = ({ experience }: { experience: Experience }) => {
       <p className="text-gray-300 text-lg mb-4 font-medium">
         <span className=" text-orange-400">{experience.company}</span> - {experience.place}
       </p>
-      <p className="text-white mb-4">{experience.description}</p>
+      <p className="text-gray-100 mb-4">{experience.description}</p>
       <div className="mt-2 flex flex-wrap gap-2">
         {experience.tags.map((tag) => (
           <CustomTag key={tag} label={tag} />

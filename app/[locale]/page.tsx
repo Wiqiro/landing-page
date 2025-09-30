@@ -18,14 +18,14 @@ const Home = () => {
       </section>
 
       {/* Section Home */}
-      <section id="home" className={`${sectionStyle} min-h-screen`}>
+      <section id="home" className={`${sectionStyle} min-h-screen px-2`}>
         <HomeSection />
       </section>
 
       {/* Section About */}
       <section
         id="about"
-        className="dotted-background bg-light pt-8 pb-20 border-b border-white/10"
+        className="dotted-background bg-light pt-8 pb-20 border-b border-white/10 px-2"
       >
         <AboutSection />
       </section>
@@ -33,28 +33,28 @@ const Home = () => {
       {/* Section Projects */}
       <section
         id="projects"
-        className="dotted-background bg-dark pt-8 pb-20 border-b border-white/10"
+        className="dotted-background bg-dark pt-8 pb-20 border-b border-white/10 px-2"
       >
         <ProjectsSection />
       </section>
 
       <section
         id="resume"
-        className="dotted-background bg-light pt-8 pb-20 border-b border-white/10"
+        className="dotted-background bg-light pt-8 pb-20 border-b border-white/10 px-2"
       >
         <ResumeSection />
       </section>
 
       <section
         id="contact"
-        className="dotted-background bg-dark pt-8 pb-20 border-b border-white/10"
+        className="dotted-background bg-dark pt-8 pb-20 border-b border-white/10 px-2"
       >
         <ContactSection />
       </section>
 
       <section
         id="bottom"
-        className="h-[96px] bg-[#1E222C] m-auto border-b border-white/10 flex justify-center items-center"
+        className="h-[96px] bg-[#1E222C] m-auto border-b border-white/10 flex justify-center items-center px-2"
       >
         <BottomSection />
       </section>

@@ -3,7 +3,7 @@ export const computeActiveSectionWithNavOffset = (navHeight: number) => {
     document.querySelectorAll<HTMLElement>("section[id]")
   );
 
-  if (window.innerHeight + window.scrollY >= document.body.offsetHeight) {
+  if (window.innerHeight + window.scrollY >= document.body.offsetHeight - 2) {
     console.log(sections[sections.length - 1]);
     return sections[sections.length - 2]?.id || null;
   }
