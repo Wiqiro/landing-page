@@ -1,45 +1,108 @@
 {
-  "hero.title": "William Imbert",
-  "hero.lines.0": "Software engineering student.",
-  "hero.lines.1": "Full-stack developer.",
-  "hero.lines.2": "DevOps enthusiast.",
-  "hero.lines.3": "Software architecture enthusiast.",
-  "hero.lines.5": "Road cycling enthusiast.",
-  "hero.cta": "Contact me",
-
-  "nav.home": "Home",
-  "nav.about": "About",
-  "nav.projects": "Projects",
-  "nav.resume": "Resume",
-  "nav.contact": "Contact",
-
-  "about.title": "About",
-  "about.lead": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sit amet ultrices est, eu sollicitudin sem.",
-  "about.lead2": "Integer maximus sit amet nisi ut malesuada. Curabitur nec eros sit amet ipsum condimentum imperdiet id condimentum risus.",
-  "about.lead3": "Maecenas euismod malesuada lobortis. Sed mollis nibh id velit iaculis condimentum.",
-  "contact.title": "Contact Me",
-  "contact.lead": "For any request or proposition, feel free to contact me using the details below or follow me on social networks.",
-  "contact.coords": "Contact details",
-  "contact.follow": "Follow me",
-
-  "projects.title": "Projects",
-  "projects.repos": "Public repos",
-  "projects.contributions": "Contributions",
-  "projects.academic": "Academic projects",
-  "projects.more": "And more...",
-  "projects.more_cta": "Check my GitHub for more projects!",
-  "projects.sample_title_1": "Project 1",
-  "projects.sample_desc_1": "Description of project 1",
-  "projects.sample_title_2": "Project 2",
-  "projects.sample_desc_2": "Description of project 2",
-  "projects.sample_title_3": "Project 3",
-  "projects.sample_desc_3": "Description of project 3",
-
-  "resume.title": "My Resume",
-  "resume.experience": "Experience",
-  "resume.education": "Education",
-  "resume.skills": "Skills",
-
-  "bottom.copyright": "William Imbert © 2025",
-  "bottom.build": "Built with Next.js, hosted on Google Cloud"
+  "hero": {
+    "title": "William Imbert",
+    "lines": [
+      "Software engineering student.",
+      "Full-stack developer.",
+      "DevOps enthusiast.",
+      "Software architecture enthusiast.",
+      "",
+      "Passionate road cyclist."
+    ],
+    "cta": "Contact me"
+  },
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "projects": "Projects",
+    "resume": "Resume",
+    "contact": "Contact"
+  },
+  "about": {
+    "title": "About",
+    "lead": "I am a final-year software engineering student at the Université de Technologie de Belfort-Montbéliard (UTBM). Fascinated by computers since my very first moments behind a keyboard, I’m proud to be turning that passion into my future profession.",
+    "lead2": "I’m particularly interested in full-stack development (web, mobile, or desktop), as well as in every part of the software creation process: project management, software quality, and DevOps.",
+    "lead3": "Outside of computer science, I’m passionate about road cycling. Discovering this discipline was a true revelation for me, pushing me to constantly test my own limits — with ultra-endurance events on the horizon!"
+  },
+  "contact": {
+    "title": "Contact Me",
+    "lead": "For any inquiry or proposal, feel free to reach out using the contact details below, or follow me on social media.",
+    "coords": "Contact Details",
+    "follow": "Follow me"
+  },
+  "projects": {
+    "title": "Projects",
+    "repos": "Public Repositories",
+    "contributions": "Contributions",
+    "academic": "Academic Projects",
+    "more": "And much more...",
+    "more_cta": "Check out my GitHub for more projects!",
+    "sample_title_1": "PLSres - Academic resource sharing web app",
+    "sample_desc_1": "Development of a full-stack web application for the PL$tek student association, providing access to academic resources (including exercise and exam solutions) from collective review sessions. Integrated with the Discord API for authentication and alignment with the association's existing workflow.",
+    "sample_title_2": "SimplifyAI - No-code AI model builder",
+    "sample_desc_2": "Development of a tool that allows users to create simple AI models (MLPs on tabular data) through a web interface. It enables data upload, preprocessing, model creation and training, as well as performance evaluation.",
+    "sample_title_3": "HyTracker - Game stats tracking mobile app",
+    "sample_desc_3": "Development of a mobile app for Hypixel (Minecraft server) players to track their PvP statistics (SkyWars, BedWars, Duels), built using the public Hypixel API."
+  },
+  "resume": {
+    "title": "My Resume",
+    "experienceTitle": "Experience",
+    "educationTitle": "Education",
+    "skillsTitle": "Skills",
+    "experience": {
+      "givemefive": {
+        "title": "Full-Stack Developer Intern",
+        "company": "Givemefive",
+        "place": "Forest, Belgium",
+        "date": "September 2024 - February 2025",
+        "description": "Joined the Agile development team of an interactive pricing calculator. I developed both frontend and backend features, along with unit and functional tests."
+      }
+    },
+    "education": {
+      "utbm_engineer": {
+        "title": "Software Engineering Program",
+        "company": "Université de Technologie de Belfort-Montbéliard",
+        "place": "Belfort, France",
+        "date": "Since September 2023",
+        "description": "Completed the Development specialization: project management, software design, software quality, Java EE, and Cloud Computing. Currently pursuing the Networks and Cybersecurity specialization, including a strong DevOps component."
+      },
+      "primorska": {
+        "title": "Study Abroad Semester",
+        "company": "University of Primorska",
+        "place": "Koper, Slovenia",
+        "date": "February 2023 - July 2023",
+        "description": "Various computer science undergraduate courses taught in English."
+      },
+      "utbm_prep": {
+        "title": "Common Core Program",
+        "company": "Université de Technologie de Belfort-Montbéliard",
+        "place": "Sevenans, France",
+        "date": "September 2021 - February 2023",
+        "description": "General courses: mathematics, mechanics, algorithms, and programming, with a focus on fundamental computer science concepts.",
+        "tags": {
+          "math": "Mathematics",
+          "mechanics": "Mechanics",
+          "algorithms": "Algorithms",
+          "c": "C"
+        }
+      }
+    },
+    "skills": {
+      "web": {
+        "title": "Web Frameworks and Technologies",
+        "skills": "React, Angular, Next.js, Node.js, FastAPI, Flutter"
+      },
+      "programming": {
+        "title": "Programming Languages",
+        "skills": "TypeScript, Python, C, C++, Java, Kotlin"
+      },
+      "devops": {
+        "title": "DevOps and QA Tools",
+        "skills": "Google Cloud Platform, Docker, Kubernetes, GitHub Actions, Jest, Cucumber"
+      }
+    }
+  },
+  "bottom": {
+    "source": "Built with Next.js, source code available on "
+  }
 }

@@ -1,45 +1,108 @@
 {
-  "hero.title": "William Imbert",
-  "hero.lines.0": "Etudiant en ingénierie logicielle.",
-  "hero.lines.1": "Développeur full-stack.",
-  "hero.lines.2": "Amateur de DevOps.",
-  "hero.lines.3": "Amateur d'architecture logicielle.",
-  "hero.lines.5": "Passionné de cyclisme sur route.",
-  "hero.cta": "Me contacter",
-
-  "nav.home": "Accueil",
-  "nav.about": "À propos",
-  "nav.projects": "Projets",
-  "nav.resume": "CV",
-  "nav.contact": "Contact",
-
-  "about.title": "À propos",
-  "about.lead": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sit amet ultrices est, eu sollicitudin sem.",
-  "about.lead2": "Integer maximus sit amet nisi ut malesuada. Curabitur nec eros sit amet ipsum condimentum imperdiet id condimentum risus.",
-  "about.lead3": "Maecenas euismod malesuada lobortis. Sed mollis nibh id velit iaculis condimentum.",
-  "contact.title": "Me Contacter",
-  "contact.lead": "Pour toute demande ou proposition, n'hésitez pas à me contacter via les coordonnées ci-dessous ou à me suivre sur les réseaux sociaux.",
-  "contact.coords": "Coordonnées",
-  "contact.follow": "Me suivre",
-
-  "projects.title": "Projets",
-  "projects.repos": "Dépôts publics",
-  "projects.contributions": "Contributions",
-  "projects.academic": "Projets académiques",
-  "projects.more": "Et bien plus...",
-  "projects.more_cta": "Consultez mon GitHub pour plus de projets !",
-  "projects.sample_title_1": "Projet 1",
-  "projects.sample_desc_1": "Description du projet 1",
-  "projects.sample_title_2": "Projet 2",
-  "projects.sample_desc_2": "Description du projet 2",
-  "projects.sample_title_3": "Projet 3",
-  "projects.sample_desc_3": "Description du projet 3",
-
-  "resume.title": "Mon CV",
-  "resume.experience": "Expérience",
-  "resume.education": "Formation",
-  "resume.skills": "Compétences",
-
-  "bottom.copyright": "William Imbert © 2025",
-  "bottom.build": "Build with Next.js, hosted on Google Cloud"
+  "hero": {
+    "title": "William Imbert",
+    "lines": [
+      "Etudiant en ingénierie logicielle.",
+      "Développeur full-stack.",
+      "Amateur de DevOps.",
+      "Amateur d'architecture logicielle.",
+      "",
+      "Passionné de cyclisme sur route."
+    ],
+    "cta": "Me contacter"
+  },
+  "nav": {
+    "home": "Accueil",
+    "about": "À propos",
+    "projects": "Projets",
+    "resume": "CV",
+    "contact": "Contact"
+  },
+  "about": {
+    "title": "À propos",
+    "lead": "Je suis étudiant en dernière année d'ingénierie logicielle à l'Université de Technologie de Belfort-Montbéliard (UTBM). Attiré par l'informatique depuis mes premiers instants derrière un clavier, je suis fier de pouvoir aujourd'hui en faire mon futur métier.",
+    "lead2": "Je m'intéresse particulièrement au développement fullstack (web, mobile ou bureau), mais aussi à tout ce qui touche au cycle de création d'une solution logicielle : gestion de projet, qualité logicielle ou encore DevOps.",
+    "lead3": "En dehors de l'informatique, je suis passionné de cyclisme sur route. La découverte de cette discipline a été une véritable révélation pour moi et m'amène à toujours repousser mes propres limites, avec des événements d'ultra-endurance dans le viseur !"
+  },
+  "contact": {
+    "title": "Me Contacter",
+    "lead": "Pour toute demande ou proposition, n'hésitez pas à me contacter via les coordonnées ci-dessous ou à me suivre sur les réseaux sociaux.",
+    "coords": "Coordonnées",
+    "follow": "Me suivre"
+  },
+  "projects": {
+    "title": "Projets",
+    "repos": "Dépôts publics",
+    "contributions": "Contributions",
+    "academic": "Projets académiques",
+    "more": "Et bien plus...",
+    "more_cta": "Consultez mon GitHub pour plus de projets !",
+    "sample_title_1": "PLSres - Application web de partage de ressources académiques",
+    "sample_desc_1": "Développement d'une application web (full-stack) pour l'association PL$tek permettant de mettre à disposition des ressources académiques (notamment des corrections d'exercices et de partiels) issus de séances de révisions collectives. Développement d'intégrations avec l'API de Discord pour l'authentification et l'adaptation au workflow actuel de l'association.",
+    "sample_title_2": "SimplifyAI - Outil de création de modèles d'IA sans code",
+    "sample_desc_2": "Développement d'un outil permettant de créer des modèles simples d'IA (MLP sur des données tabulaires) via une interface web. L'outil permet de charger des données, de les pré-traiter, de créer et entraîner un modèle, puis d'évaluer ses performances.",
+    "sample_title_3": "HyTracker - Application de suivi des statistiques de jeu",
+    "sample_desc_3": "Développement d'un app mobile permettant aux joueurs d'Hypixel (serveur Minecraft) de suivre leurs statistiques de jeu PvP (SkyWars, BedWars, Duels), réalisé en utilisant l'API publique d'Hypixel."
+  },
+  "resume": {
+    "title": "Mon CV",
+    "experienceTitle": "Expérience",
+    "educationTitle": "Formation",
+    "skillsTitle": "Compétences",
+    "experience": {
+      "givemefive": {
+        "title": "Stagiaire développeur Full-Stack",
+        "company": "Givemefive",
+        "place": "Forest, Belgique",
+        "date": "Septembre 2024 - Février 2025",
+        "description": "Intégration à l'équipe développement Agile d'un calculateur de pricing interactif. J'ai développé des fonctionnalités frontend comme backend, accompagnés de tests unitaires et fonctionnels."
+      }
+    },
+    "education": {
+      "utbm_engineer": {
+        "title": "Cycle Ingénieur en Informatique",
+        "company": "Université de Technologie de Belfort-Montbéliard",
+        "place": "Belfort, France",
+        "date": "Depuis septembre 2023",
+        "description": "Spécialisation Développement validée : gestion de projet, conception logicielle, qualité logicielle, Java EE et Cloud Computing. Spécialisation Réseaux et Cybersécurité en cours, incluant un aspect DevOps."
+      },
+      "primorska": {
+        "title": "Semestre d'études à l'étranger",
+        "company": "University of Primorska",
+        "place": "Koper, Slovénie",
+        "date": "Février 2023 - juillet 2023",
+        "description": "Divers cours de licence informatique en anglais"
+      },
+      "utbm_prep": {
+        "title": "Classe préparatoire intégrée",
+        "company": "Université de Technologie de Belfort-Montbéliard",
+        "place": "Sevenans, France",
+        "date": "Septembre 2021 - Février 2023",
+        "description": "Cours généralistes : mathématiques, mécanique, algorithmique, programmation, avec un accent sur les concepts fondamentaux d'informatique.",
+        "tags": {
+          "math": "Mathématiques",
+          "mechanics": "Mécanique",
+          "algorithms": "Algorithmique",
+          "c": "C"
+        }
+      }
+    },
+    "skills": {
+      "web": {
+        "title": "Frameworks et technologies web",
+        "skills": "React, Angular, Next.js, Node.js, FastAPI, Flutter"
+      },
+      "programming": {
+        "title": "Langages de programmation",
+        "skills": "TypeScript, Python, C, C++, Java, Kotlin"
+      },
+      "devops": {
+        "title": "Outils DevOps et QA",
+        "skills": "Google Cloud Platform, Docker, Kubernetes, GitHub Actions, Jest, Cucumber"
+      }
+    }
+  },
+  "bottom": {
+    "source": "Développé avec Next.js, code source disponible sur "
+  }
 }
