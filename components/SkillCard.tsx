@@ -13,7 +13,7 @@ export const SkillCard = ({
   return (
     <Card>
       <div className="flex text-orange-400 mb-6 mx-auto justify-around">{icon}</div>
-      <h3 className="text-xl text-center font-bold mb-4 text-orange-400">
+      <h3 className="text-xl text-center font-bold mb-4 min-h-[3em] text-orange-400">
         {title}
       </h3>
       <p className="text-gray-300 text-center">{skills}</p>

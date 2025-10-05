@@ -1,10 +1,13 @@
 import { ReactNode } from "react";
+import { CustomTag } from "./CustomTag";
 
 export const Card = ({
   children,
+  tags = [],
   hoverEffect = true,
 }: {
   children: ReactNode;
+  tags?: string[];
   hoverEffect?: boolean;
 }) => {
   return (
@@ -14,6 +17,11 @@ export const Card = ({
       } transition duration-300 shadow-sm`}
     >
       {children}
+      <div className="mt-2 flex flex-wrap gap-3">
+        {tags.map((tag) => (
+          <CustomTag key={tag} label={tag} />
+        ))}
+      </div>
     </div>
   );
 };

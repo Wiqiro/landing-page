@@ -7,6 +7,8 @@ const iconStyle =
 export const ProjectCard = ({
   title,
   description,
+  link,
+  tags,
 }: {
   title: string;
   description: string;
@@ -14,11 +16,11 @@ export const ProjectCard = ({
   tags: string[];
 }) => {
   return (
-    <Card>
+    <Card tags={tags}>
       <div className="flex justify-between">
         <h3 className="text-2xl font-bold text-orange-400 mb-4">{title}</h3>
         <a
-          href="https://github.com/Wiqiro"
+          href={link}
           target="_blank"
           rel="noopener noreferrer"
           className="text-gray-100"

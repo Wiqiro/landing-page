@@ -1,5 +1,5 @@
 "use client";
-import { Braces, Globe2 } from "react-bootstrap-icons";
+import { Braces, Globe2, Infinity } from "react-bootstrap-icons";
 import { SkillCard } from "../SkillCard";
 import { useI18n } from "@/components/I18nProvider";
 import { TimelineGroup } from "../TimelineGroup";
@@ -10,43 +10,60 @@ export const ResumeSection = () => {
 
   const experiences: Experience[] = [
     {
-      title: "Développeur Full-Stack",
-      company: "Entreprise XYZ",
-      place: "Paris, France",
-      date: "2023 - Présent",
-      description:
-        "Développement et maintenance d'applications web en utilisant React, Node.js et MongoDB. Collaboration avec les équipes de conception et de produit pour créer des solutions innovantes.",
-      tags: ["React", "Node.js", "MongoDB"],
-    },
-    {
-      title: "Stagiaire Développeur",
-      company: "Startup ABC",
-      place: "Lyon, France",
-      date: "2022 - 2023",
-      description:
-        "Participation au développement d'une application mobile en utilisant React Native. Contribution à l'optimisation des performances et à l'amélioration de l'expérience utilisateur.",
-      tags: ["React Native", "JavaScript", "UI/UX"],
+      title: t("resume.experience.givemefive.title"),
+      company: t("resume.experience.givemefive.company"),
+      place: t("resume.experience.givemefive.place"),
+      date: t("resume.experience.givemefive.date"),
+      description: t("resume.experience.givemefive.description"),
+      tags: [
+        "SCRUM",
+        "React",
+        "Node.js",
+        "Apollo GraphQL",
+        "Prisma ORM",
+        "Jest",
+        "Cucumber",
+      ],
     },
   ];
 
   const education: Experience[] = [
     {
-      title: "Master en Informatique",
-      company: "Université de Technologie",
-      place: "Lille, France",
-      date: "2020 - 2022",
-      description:
-        "Spécialisation en développement web et mobile. Projets académiques axés sur la création d'applications performantes et évolutives.",
-      tags: ["Java", "Python", "Bases de données"],
+      title: t("resume.education.utbm_engineer.title"),
+      company: t("resume.education.utbm_engineer.company"),
+      place: t("resume.education.utbm_engineer.place"),
+      date: t("resume.education.utbm_engineer.date"),
+      description: t("resume.education.utbm_engineer.description"),
+      tags: [
+        "Conception",
+        "Architecture",
+        "Java EE",
+        "Docker",
+        "Kubernetes",
+        "Réseaux LAN",
+        "GCP",
+      ],
     },
     {
-      title: "Licence en Informatique",
-      company: "Université de Sciences",
-      place: "Marseille, France",
-      date: "2017 - 2020",
-      description:
-        "Formation générale en informatique avec une introduction aux concepts de programmation, structures de données et algorithmes.",
-      tags: ["C", "C++", "Algorithmique"],
+      title: t("resume.education.primorska.title"),
+      company: t("resume.education.primorska.company"),
+      place: t("resume.education.primorska.place"),
+      date: t("resume.education.primorska.date"),
+      description: t("resume.education.primorska.description"),
+      tags: ["Unity", "R", "OpenGL"],
+    },
+    {
+      title: t("resume.education.utbm_prep.title"),
+      company: t("resume.education.utbm_prep.company"),
+      place: t("resume.education.utbm_prep.place"),
+      date: t("resume.education.utbm_prep.date"),
+      description: t("resume.education.utbm_prep.description"),
+      tags: [
+        t("resume.education.utbm_prep.tags.math"),
+        t("resume.education.utbm_prep.tags.mechanics"),
+        t("resume.education.utbm_prep.tags.algorithms"),
+        "C",
+      ],
     },
   ];
 
@@ -56,34 +73,34 @@ export const ResumeSection = () => {
         {t("resume.title")}
       </h2>
       <h3 className="text-3xl font-bold mb-4 text-center">
-        {t("resume.experience")}
+        {t("resume.experienceTitle")}
       </h3>
       <TimelineGroup experiences={experiences} />
 
       <h3 className="text-3xl font-bold mb-4 text-center">
-        {t("resume.education")}
+        {t("resume.educationTitle")}
       </h3>
 
       <TimelineGroup experiences={education} />
 
       <h3 className="text-3xl font-bold mb-4 text-center">
-        {t("resume.skills")}
+        {t("resume.skillsTitle")}
       </h3>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
         <SkillCard
-          title="Frameworks et technologies web"
-          skills="React, Node.js, MongoDB"
+          title={t("resume.skills.web.title")}
+          skills={t("resume.skills.web.skills")}
           icon={<Globe2 size={40} />}
         />
         <SkillCard
-          title="Langages de programmation"
-          skills="JavaScript, TypeScript, Python, Java"
+          title={t("resume.skills.programming.title")}
+          skills={t("resume.skills.programming.skills")}
           icon={<Braces size={40} />}
         />
         <SkillCard
-          title="Outils DevOps"
-          skills="Docker, Kubernetes, Jenkins"
-          icon={<Globe2 size={40} />}
+          title={t("resume.skills.devops.title")}
+          skills={t("resume.skills.devops.skills")}
+          icon={<Infinity size={40} />}
         />
       </div>
     </div>

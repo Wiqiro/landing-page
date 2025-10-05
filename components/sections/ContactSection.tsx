@@ -83,7 +83,7 @@ export const ContactSection = () => {
                 Wiqiro
               </IconLink>
               <IconLink
-                href="mailto:williamnoimbert@gmail.com"
+                href="https://www.strava.com/athletes/87344895"
                 className={iconStyle}
               >
                 <Strava size={28} />
